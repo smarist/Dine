@@ -1,23 +1,26 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
 import useStyles from './Header.style';
+import { ReactComponent as Dine } from '../../Images/logo.svg';
 
 function Header() {
   const classes = useStyles();
   return (
     <Box className={classes.headerBox}>
-      <Box>
-        <Typography>dine</Typography>
-        <Typography>Exquisite dining since 2015</Typography>
-        <Typography>
+      <Box className={classes.section}>
+        <Box><Dine /></Box>
+        <Typography variant="h3" className={classes.text1}>
+          Exquisite dining
+          <br />
+          since 2015
+        </Typography>
+        <Typography variant="p" className={classes.text2}>
           Experience our seasonal menu in beautiful country surrondings.
           Eat the freashest produce from the comfort of our farmhouse.
         </Typography>
-        <Box>BOOK A TABLE</Box>
+        <Box className={classes.bookBtn}>BOOK A TABLE</Box>
       </Box>
-      <Box className={classes.headerImg}>
-        Background img
-      </Box>
+      <Box className={classes.headerImg} />
     </Box>
   );
 }
