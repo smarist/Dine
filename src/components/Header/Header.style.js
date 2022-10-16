@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       flexDirection: 'row',
-      height: '75vh',
+      height: '100%',
     },
   },
   section: {
@@ -27,12 +27,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '10px',
+      padding: '20px',
+      marginTop: '-20px',
     },
   },
   text1: {
     fontWeight: '100',
-    letterSpacing: '1px',
+    letterSpacing: '1.8px',
+    wordSpacing: '2.4px',
     marginTop: '10px',
     [theme.breakpoints.down('md')]: {
       fontSize: '2.1em',
@@ -41,12 +43,26 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       marginTop: '150px',
+      fontSize: '3.3em',
     },
   },
   text2: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       alignItems: 'center',
       textAlign: 'center',
+      fontSize: '1em',
+    },
+    [theme.breakpoints.up('md')]: {
+      alignItems: 'center',
+      textAlign: 'center',
+      fontSize: '1.4em',
+      width: '700px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.1em',
+      alignItems: 'left',
+      textAlign: 'left',
+      width: '400px',
     },
   },
   headerImg: {
@@ -55,20 +71,21 @@ const useStyles = makeStyles((theme) => ({
       position: 'relative',
       backgroundImage: `url(${HeaderImgMobile})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100% auto',
-      height: '30vh',
+      height: '40vh',
+      backgroundSize: 'cover',
     },
     [theme.breakpoints.up('md')]: {
       backgroundImage: `url(${HeaderImgTablet})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100% auto',
-      height: '30vh',
+      backgroundSize: 'cover',
+      height: '75vh',
     },
     [theme.breakpoints.up('lg')]: {
       backgroundImage: `url(${HeaderImgDesktop})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100% auto',
-      height: '100%',
+      backgroundSize: 'cover',
+      height: '100vh',
+      backgroundPosition: 'right',
     },
   },
   bookBtn: {
