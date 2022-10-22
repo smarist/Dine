@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#111111',
     color: '#FFFF',
     display: 'flex',
+    overflowY: 'hidden',
+    '&::-webkit-scrollbar': {
+      display: 'none !important',
+    },
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column-reverse',
     },
@@ -29,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       padding: '20px',
       marginTop: '-20px',
+      paddingBottom: '100px',
     },
   },
   text1: {
@@ -42,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
     [theme.breakpoints.up('lg')]: {
-      marginTop: '150px',
-      fontSize: '3.3em',
+      marginTop: '45%',
+      fontSize: '3.2em',
     },
   },
   text2: {
