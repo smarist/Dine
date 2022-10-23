@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
       height: '520px',
       width: '400px',
       marginTop: '-60px',
+      marginLeft: '90px',
     },
   },
   grid2: {
