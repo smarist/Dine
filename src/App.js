@@ -1,12 +1,15 @@
 import { MuiThemeProvider } from '@material-ui/core';
-import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes/PageRoutes';
 import { theme } from './utils/theme';
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
-      <Home />
-    </MuiThemeProvider>
+    <BrowserRouter>
+      <MuiThemeProvider theme={theme}>
+        <Routes />
+      </MuiThemeProvider>
+    </BrowserRouter>
   );
 }
 

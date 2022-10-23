@@ -2,45 +2,16 @@ import { makeStyles } from '@material-ui/core';
 import HeaderImgMobile from '../../Images/hero-bg-mobile.jpg';
 import HeaderImgDesktop from '../../Images/hero-bg-desktop.jpg';
 import HeaderImgTablet from '../../Images/hero-bg-tablet.jpg';
-import ImgBgD from '../../Images/ready-bg-desktop.jpg';
-import ImgBgM from '../../Images/ready-bg-mobile.jpg';
 
 const useStyles = makeStyles((theme) => ({
   footerBox: {
+    backgroundColor: '#111111',
     color: '#FFFF',
-    width: '100%',
     // display: 'flex',
     overflowY: 'hidden',
     '&::-webkit-scrollbar': {
       display: 'none !important',
     },
-  },
-  section1: {
-    width: '100%',
-    height: '30vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      position: 'relative',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundImage: `url(${ImgBgM})`,
-    },
-    [theme.breakpoints.up('md')]: {
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundImage: `url(${ImgBgD})`,
-    },
-    [theme.breakpoints.up('lg')]: {
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundImage: `url(${ImgBgD})`,
-    },
-  },
-  section2: {
-    backgroundColor: '#111111',
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       alignItems: 'center',
@@ -135,25 +106,6 @@ const useStyles = makeStyles((theme) => ({
       height: '100vh',
       backgroundPosition: 'right',
     },
-  },
-  bookBtn: {
-    marginTop: '20px',
-    width: '220px',
-    height: '50px',
-    padding: '4px',
-    border: '2px solid white',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    cursor: 'pointer',
-    '&:hover': {
-      border: 'none',
-      backgroundColor: '#FFF',
-      color: '#111111',
-    },
-  },
-  reseveration: {
-    fontSize: '1.7em',
   },
   contactBox: {
     display: 'flex',

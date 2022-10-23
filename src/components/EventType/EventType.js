@@ -1,10 +1,12 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useStyles from './EventType.style';
 import useEventType from './hooks/useEventType';
 
 function EventType() {
   const classes = useStyles();
+  const navigate = useNavigate();
   const {
     onClick1,
     onClick2,
@@ -23,7 +25,12 @@ function EventType() {
         <Box className={classes.section2}>
           <Typography className={classes.title}>{title}</Typography>
           <Typography className={classes.msg}>{msg}</Typography>
-          <Box className={classes.bookBtn}>BOOK A TABLE</Box>
+          <Box
+            className={classes.bookBtn}
+            onClick={() => navigate('/Reservation')}
+          >
+            BOOK A TABLE
+          </Box>
         </Box>
         <Box className={classes.section3}>
           <Typography

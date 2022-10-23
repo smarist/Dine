@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import useStyles from '../../components/Header/Header.style';
 import Menu from '../../components/Menu';
 import MidSection from '../../components/MidSection';
+import Reserve from '../../components/Reserve';
 
 function Home() {
   const classes = useStyles();
@@ -14,6 +15,7 @@ function Home() {
       <MidSection />
       <Menu />
       <EventType />
+      <Reserve />
       <Footer />
     </div>
   );
