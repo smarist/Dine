@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import EventType from '../../components/EventType';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
@@ -10,14 +11,19 @@ import Reserve from '../../components/Reserve';
 function Home() {
   const classes = useStyles();
   return (
-    <div className={classes.body}>
+    <motion.div
+      className={classes.body}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Header />
       <MidSection />
       <Menu />
       <EventType />
       <Reserve />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

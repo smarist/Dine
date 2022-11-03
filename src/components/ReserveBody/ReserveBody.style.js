@@ -5,13 +5,11 @@ import HeaderImgTablet from '../../Images/hero-bg-table.jpg';
 
 const useStyles = makeStyles((theme) => ({
   reserveBg: {
-    marginTop: '-49px',
-    width: '100%',
     [theme.breakpoints.down('sm')]: {
       position: 'relative',
       backgroundImage: `url(${HeaderImgMobile})`,
       backgroundRepeat: 'no-repeat',
-      height: '30vh',
+      height: '470px',
       backgroundSize: 'cover',
       padding: '20px',
     },
@@ -19,21 +17,24 @@ const useStyles = makeStyles((theme) => ({
       backgroundImage: `url(${HeaderImgTablet})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: '50vh',
-      padding: '20px',
+      height: '80vh',
+      padding: '40px 70px',
+      display: 'flex',
+      flexDirection: 'column',
     },
     [theme.breakpoints.up('lg')]: {
       backgroundImage: `url(${HeaderImgDesktop})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: '70vh',
+      height: '400px',
       backgroundPosition: 'right',
-      padding: '0px',
+      paddingTop: '50px',
     },
   },
-  section1: {
+  section: {
     color: '#FFF',
     display: 'flex',
+    justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -42,16 +43,60 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       flexDirection: 'row',
+      gap: '100px',
+      marginTop: '22px',
+    },
+  },
+  section1: {
+    display: 'flex',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+    },
+    [theme.breakpoints.up('md')]: {
+    },
+    [theme.breakpoints.up('lg')]: {
+    },
+  },
+  section2: {
+    display: 'flex',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '40px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+      marginTop: '40px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '500px',
+      marginTop: '75px',
+    },
+  },
+  reserveTypo: {
+    marginTop: '20px !important',
+    fontSize: '16px !important',
+    [theme.breakpoints.down('sm')]: {
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '530px',
+      fontSize: '1.3em',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '500px',
     },
   },
   dine: {
-    marginTop: '50px',
     [theme.breakpoints.down('sm')]: {
       marginBottom: '30px',
     },
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: '20px',
+    },
   },
   reseveration: {
-    fontSize: '1.9em',
+    fontSize: '2.6em !important',
+    marginTop: '40px !important',
+    letterSpacing: '6px !important',
   },
   bookBtn: {
     marginTop: '20px',
@@ -63,21 +108,26 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     cursor: 'pointer',
+    fontSize: '1.1em',
     '&:hover': {
       border: 'none',
       backgroundColor: '#FFF',
       color: '#111111',
     },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '40px',
+    },
   },
   whiteBg: {
+    backgroundColor: '#F9F9F9',
     [theme.breakpoints.down('sm')]: {
-      height: '40vh',
+      height: '420px',
     },
     [theme.breakpoints.up('md')]: {
-      height: '40vh',
+      height: '300px',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '40vh',
+      height: '150px',
     },
   },
 }));

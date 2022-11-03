@@ -1,13 +1,20 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Dine } from '../../Images/logo.svg';
 import useStyles from './Footer.style';
 
 function Footer() {
   const classes = useStyles();
+  const navigate = useNavigate();
   return (
     <Box className={classes.footerBox}>
-      <Box className={classes.dine}><Dine /></Box>
+      <Box
+        onClick={() => navigate('/')}
+        className={classes.dine}
+      >
+        <Dine />
+      </Box>
       <Box className={classes.textBox}>
         <Box className={classes.contactBox}>
           <Typography>Marthwaite, Sedbergh</Typography>
