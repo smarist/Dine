@@ -20,7 +20,8 @@ function Form({ focusRef }) {
     handleOpen,
     handleSubmit,
     isSubmitDisabled,
-    // handleClose,
+    handleClose,
+    dispatch,
   } = useForm();
   const {
     name,
@@ -66,7 +67,12 @@ function Form({ focusRef }) {
             type="number"
             onFocus={handleOpen}
             value={dateValue && dateValue?.format('D')}
-            // onBlur={handleClose}
+            onChange={
+              value => {
+                console.log(value.format('D'));
+                handleClose();
+              }
+            }
           />
           <TextField
             id="standard"
@@ -74,6 +80,12 @@ function Form({ focusRef }) {
             type="number"
             onFocus={handleOpen}
             value={dateValue && dateValue?.format('M')}
+            onChange={
+              value => {
+                console.log(value.format('M'));
+                handleClose();
+              }
+            }
             // onBlur={handleClose}
           />
           <TextField
@@ -82,7 +94,12 @@ function Form({ focusRef }) {
             type="number"
             onFocus={handleOpen}
             value={dateValue && dateValue?.format('YYYY')}
-            // onBlur={handleClose}
+            onChange={
+              value => {
+                console.log(value.format('YYYY'));
+                handleClose();
+              }
+            }
           />
           {
             openDate
@@ -99,7 +116,10 @@ function Form({ focusRef }) {
                 input={false}
                 open={false}
                 value={state?.dateValue}
-                onChange={value => console.log(value.format('YYYY'))}
+                onChange={value => {
+                  dispatch({ dateValue: value });
+                  handleClose();
+                }}
               />
             </Box>
             )
