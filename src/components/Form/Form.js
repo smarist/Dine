@@ -18,6 +18,8 @@ function Form({ focusRef }) {
     state,
     openDate,
     handleOpen,
+    handleSubmit,
+    isSubmitDisabled,
     // handleClose,
   } = useForm();
   const {
@@ -25,9 +27,12 @@ function Form({ focusRef }) {
     email,
     count,
     dateValue,
+    emailError,
+    allError,
   } = state;
   return (
     <form className={classes.form}>
+      <Box component="span" className={classes.errorMsg}>{allError}</Box>
       <Box className={classes.textFieldBox}>
         <TextField
           className={classes.textField}
@@ -50,6 +55,7 @@ function Form({ focusRef }) {
           validators={['required', 'isEmail']}
           errorMessages={['Email is required', 'Not a valid email address']}
         />
+        <Box component="span" className={classes.errorMsg}>{emailError}</Box>
       </Box>
       <Box className={classes.dateBox}>
         <Typography className={classes.dateText}>Pick a date</Typography>
@@ -137,11 +143,13 @@ function Form({ focusRef }) {
         </Button>
       </Box>
       <Box>
-        <Box
+        <Button
+          disabled={isSubmitDisabled}
           className={classes.bookBtn}
+          onClick={(e) => handleSubmit(e)}
         >
           MAKE RESERVATION
-        </Box>
+        </Button>
       </Box>
     </form>
   );

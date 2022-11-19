@@ -10,6 +10,9 @@ const useStyles = makeStyles(() => ({
     zIndex: 1,
     padding: '30px',
   },
+  errorMsg: {
+    color: 'red',
+  },
   textFieldBox: {
     marginTop: '15px',
     // width: '100%',
@@ -65,6 +68,10 @@ const useStyles = makeStyles(() => ({
       backgroundColor: '#FFF',
       border: '3px solid #111111',
       color: '#111111',
+    },
+    '&:disabled': {
+      backgroundColor: '#2222',
+      color: '#FFF',
     },
   },
 }));
