@@ -16,9 +16,8 @@ function useForm() {
   const [state, dispatch] = useReducer((states, value) => ({ ...states, ...value }), initState);
 
   const {
-    count, name, email, dateValue,
+    count, name, email,
   } = state;
-  console.log(dateValue);
   const addClick = () => {
     dispatch({ count: count + 1 });
   };
@@ -56,6 +55,7 @@ function useForm() {
       return toast.success('Your Reservation was successful!');
     } return dispatch({ emailError: 'Invalid email!!!' });
   }
+
   return {
     count,
     addClick,

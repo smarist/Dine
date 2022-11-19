@@ -67,26 +67,15 @@ function Form({ focusRef }) {
             type="number"
             onFocus={handleOpen}
             value={dateValue && dateValue?.format('D')}
-            onChange={
-              value => {
-                console.log(value.format('D'));
-                handleClose();
-              }
-            }
+            onChange={handleClose}
           />
           <TextField
             id="standard"
             label="MM"
             type="number"
             onFocus={handleOpen}
-            value={dateValue && dateValue?.format('M')}
-            onChange={
-              value => {
-                console.log(value.format('M'));
-                handleClose();
-              }
-            }
-            // onBlur={handleClose}
+            value={dateValue && dateValue?.format('MM')}
+            onChange={handleClose}
           />
           <TextField
             id="standard"
@@ -94,12 +83,7 @@ function Form({ focusRef }) {
             type="number"
             onFocus={handleOpen}
             value={dateValue && dateValue?.format('YYYY')}
-            onChange={
-              value => {
-                console.log(value.format('YYYY'));
-                handleClose();
-              }
-            }
+            onChange={handleClose}
           />
           {
             openDate
@@ -133,13 +117,23 @@ function Form({ focusRef }) {
             id="standard"
             label="HH"
             type="number"
+            onFocus={handleOpen}
+            value={dateValue && dateValue?.format('HH')}
+            onChange={handleClose}
           />
           <TextField
             id="standard"
             label="MM"
             type="number"
+            onFocus={handleOpen}
+            value={dateValue && dateValue?.format('mm')}
+            onChange={handleClose}
           />
-          <Box>AM</Box>
+          {/* <TextField
+            id="standard"
+            value={dateValue && (dateValue?.format('aa'))}
+            onChange={handleClose}
+          /> */}
         </Box>
       </Box>
 
